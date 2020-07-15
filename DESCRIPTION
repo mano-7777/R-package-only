@@ -1,0 +1,10 @@
+Package: only
+Type: Package
+Title: Grabing hour
+Version: 0.1.0
+Author: Mano R
+Maintainer: Mano R <manoramu459@gmail.com>
+Description: Contains a function which grab the Hour from the datetime column.
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
