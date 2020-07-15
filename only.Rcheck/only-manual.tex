@@ -1,0 +1,64 @@
+\nonstopmode{}
+\documentclass[a4paper]{book}
+\usepackage[times,inconsolata,hyper]{Rd}
+\usepackage{makeidx}
+\usepackage[utf8]{inputenc} % @SET ENCODING@
+% \usepackage{graphicx} % @USE GRAPHICX@
+\makeindex{}
+\begin{document}
+\chapter*{}
+\begin{center}
+{\textbf{\huge Package `only'}}
+\par\bigskip{\large \today}
+\end{center}
+\begin{description}
+\raggedright{}
+\inputencoding{utf8}
+\item[Type]\AsIs{Package}
+\item[Title]\AsIs{Only Package}
+\item[Version]\AsIs{0.1.0}
+\item[Author]\AsIs{Mano R}
+\item[Maintainer]\AsIs{Mano R }\email{manoramu459@gmail.com}\AsIs{}
+\item[Description]\AsIs{Conatains one function for separating the hour from the datetime column.}
+\item[License]\AsIs{GPL-2}
+\item[Encoding]\AsIs{UTF-8}
+\item[LazyData]\AsIs{true}
+\item[RoxygenNote]\AsIs{7.1.1}
+\item[NeedsCompilation]\AsIs{no}
+\end{description}
+\Rdcontents{\R{} topics documented:}
+\inputencoding{utf8}
+\HeaderA{only\_hour}{Import a dataset}{only.Rul.hour}
+%
+\begin{Description}\relax
+More detailed description.
+if there is any datetime column in the dataset and a step that you want to grab only the hour from the datatime column this package is useful to you.
+\end{Description}
+%
+\begin{Usage}
+\begin{verbatim}
+only_hour(x)
+\end{verbatim}
+\end{Usage}
+%
+\begin{Arguments}
+\begin{ldescription}
+\item[\code{x}] Numeric variable
+\end{ldescription}
+\end{Arguments}
+%
+\begin{Value}
+Factor variable
+\end{Value}
+%
+\begin{Examples}
+\begin{ExampleCode}
+bike <- read.csv('bikeshare.csv')
+head(bike$datetime)
+
+only-hour<-sapply(bike$datetime,only_hour)
+
+\end{ExampleCode}
+\end{Examples}
+\printindex{}
+\end{document}

@@ -1,0 +1,45 @@
+
+R version 4.0.2 (2020-06-22) -- "Taking Off Again"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-w64-mingw32/x64 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> pkgname <- "only"
+> source(file.path(R.home("share"), "R", "examples-header.R"))
+> options(warn = 1)
+> options(pager = "console")
+> library('only')
+> 
+> base::assign(".oldSearch", base::search(), pos = 'CheckExEnv')
+> base::assign(".old_wd", base::getwd(), pos = 'CheckExEnv')
+> cleanEx()
+> nameEx("only_hour")
+> ### * only_hour
+> 
+> flush(stderr()); flush(stdout())
+> 
+> ### Name: only_hour
+> ### Title: Import a dataset
+> ### Aliases: only_hour
+> 
+> ### ** Examples
+> 
+> bike <- read.csv('bikeshare.csv')
+Warning in file(file, "rt") :
+  cannot open file 'bikeshare.csv': No such file or directory
+Error in file(file, "rt") : cannot open the connection
+Calls: read.csv -> read.table -> file
+Execution halted
